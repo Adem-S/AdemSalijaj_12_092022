@@ -1,0 +1,13 @@
+.icon-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 3em;
+    border-radius: 0.2em;
+}
+
+.icon-background img {
+   width: auto;
+   height: 55%;
+}
