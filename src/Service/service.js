@@ -10,6 +10,7 @@ import {
  * @constructor
  * @param {string} userId
  * @param {boolean} useMock
+ * @return {object}
  */
 export const getUserInfos = async (userId, useMock) => {
   if (useMock) {
@@ -27,10 +28,11 @@ export const getUserInfos = async (userId, useMock) => {
 };
 
 /**
- *
- * @param {*} userId
- * @param {*} useMock
- * @returns user activity
+ * @description Retrieve user activity
+ * @constructor
+ * @param {string} userId
+ * @param {boolean} useMock
+ * @return {object}
  */
 export const getUserActivity = async (userId, useMock) => {
   let activitySessions;
@@ -63,6 +65,7 @@ export const getUserActivity = async (userId, useMock) => {
  * @constructor
  * @param {string} userId
  * @param {boolean} useMock
+ * @return {array}
  */
 export const getUserAverageSessions = async (userId, useMock) => {
   const daysOfWeek = ["L", "M", "M", "J", "V", "S", "D"];
@@ -94,6 +97,7 @@ export const getUserAverageSessions = async (userId, useMock) => {
  * @constructor
  * @param {string} userId
  * @param {boolean} useMock
+ * @return {array}
  */
 export const getUserPerformance = async (userId, useMock) => {
   let data;

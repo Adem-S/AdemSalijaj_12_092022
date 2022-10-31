@@ -7,6 +7,11 @@ import bodybuildingIcon from "../../Assets/bodybuilding_icon.svg";
 import IconBackground from "../../Components/IconBackground/IconBackground";
 import "./Sidebar.css";
 
+/**
+ * Component for showing Sidebar
+ *
+ * @component
+ */
 const Sidebar = () => {
   return (
     <div className="sidebar">

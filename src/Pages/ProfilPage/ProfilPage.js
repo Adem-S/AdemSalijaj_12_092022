@@ -33,13 +33,18 @@ import {
   getUserPerformance,
 } from "../../Service/service";
 
+/**
+ * Component for showing user profil
+ *
+ * @component
+ */
 const ProfilPage = () => {
   const [profil, setProfil] = useState(null);
   const [activity, setActivity] = useState(null);
   const [averageSessions, setAverageSessions] = useState(null);
   const [performance, setPerformance] = useState(null);
 
-  let { id } = useParams();
+  let { id } = useParams(); // profil id
 
   useEffect(() => {
     getUserInfos(id, id === "12").then((data) => setProfil(data));
@@ -67,25 +72,25 @@ const ProfilPage = () => {
           <div className="profil__content">
             <div className="profil__keydata">
               <CardKeyData
-                image={energyIcon}
+                icon={energyIcon}
                 backgroundImageColor="rgba(255, 0, 0, 0.1)"
                 title="Calories"
                 value={`${profil.keyData.calorieCount}kCal`}
               />
               <CardKeyData
-                image={chickenIcon}
+                icon={chickenIcon}
                 backgroundImageColor="rgba(74, 184, 255, 0.1)"
                 title="Proteines"
                 value={`${profil.keyData.proteinCount}g`}
               />
               <CardKeyData
-                image={appleIcon}
+                icon={appleIcon}
                 backgroundImageColor="rgba(249, 206, 35, 0.1)"
                 title="Glucides"
                 value={`${profil.keyData.carbohydrateCount}g`}
               />
               <CardKeyData
-                image={cheeseburgerIcon}
+                icon={cheeseburgerIcon}
                 backgroundImageColor="rgba(253, 81, 129, 0.1)"
                 title="Lipides"
                 value={`${profil.keyData.lipidCount}g`}
@@ -176,7 +181,7 @@ const ProfilPage = () => {
                     {({ width, height }) => (
                       <LineChart
                         data={averageSessions}
-                        margin={{ top: 0, right: 5, bottom: 0, left: 5 }}
+                        margin={{ top: 0, right: 20, bottom: 0, left: 20 }}
                         width={width}
                         height={height}
                       >
@@ -245,6 +250,7 @@ const ProfilPage = () => {
                   </AutoSizer>
                 </div>
               )}
+
               {performance && (
                 <div className="profil__chart__radar">
                   <AutoSizer>
@@ -274,6 +280,7 @@ const ProfilPage = () => {
                   </AutoSizer>
                 </div>
               )}
+
               <div className="profil__chart__radial">
                 <AutoSizer>
                   {({ width, height }) => (

@@ -8,6 +8,11 @@ import Header from "../Pages/Header/Header";
 import Sidebar from "../Pages/Sidebar/Sidebar";
 import ProfilPage from "../Pages/ProfilPage/ProfilPage";
 
+/**
+ * Component for showing App with Routes
+ *
+ * @component
+ */
 function App() {
   return (
     <>
