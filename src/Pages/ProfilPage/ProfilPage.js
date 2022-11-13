@@ -348,6 +348,7 @@ const ProfilPage = () => {
           </div>
         </>
       )}
+      {!profil && <div className="error-api">Api ne répond pas</div>}
     </div>
   );
 };

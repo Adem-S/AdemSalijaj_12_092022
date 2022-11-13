@@ -129,6 +129,15 @@
     color: black;
 }
 
+.error-api {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    font-size: 2em;
+}
+
 @media only screen and (min-width: 1400px) {
     .profil__content {
         flex-direction: row-reverse;

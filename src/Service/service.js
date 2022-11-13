@@ -114,8 +114,8 @@ export const getUserPerformance = async (userId, useMock) => {
       data = responseToJson.data;
     }
   }
-  let array = data.data.reduce((p, n, i) => {
-    return p.concat({ ...n, kind: data.kind[i + 1] });
+  let array = data.data.reduce((p, n) => {
+    return p.concat({ ...n, kind: data.kind[n.kind] });
   }, []);
   return array;
 };

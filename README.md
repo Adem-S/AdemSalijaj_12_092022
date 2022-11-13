@@ -2,6 +2,7 @@
 
 - node >= v16.0
 - npm
+- VSCODE
 
 # Launching the project (project root)
 
